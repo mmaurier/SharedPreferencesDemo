@@ -1,6 +1,8 @@
 package com.example.android.sharedpreferencesdemo;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -33,6 +35,19 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences.edit().putString("username", "marco").apply();
         String username = sharedPreferences.getString("username","");
         Log.i("username", username);
+
+        new AlertDialog.Builder(this)
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setTitle("Are you sure?")
+                .setMessage("Do you definitely want to do this?")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Log.i("button tapped","yes");
+                    }
+                })
+                .setNegativeButton("No", null)
+                .show();
     }
 
     @Override

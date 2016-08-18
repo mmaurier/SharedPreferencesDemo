@@ -1,2 +1,2 @@
 # SharedPreferencesDemo
-Coding project from Udemy.com: "The Complete Android Developer Course". Permanent data storage demo.
+Coding project from Udemy.com: "The Complete Android Developer Course".<br />Permanent data storage demo.
